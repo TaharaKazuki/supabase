@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import siteConfig from '@/config/site'
 
+import SocialLink from '../elements/social-link'
 import PaddingContainer from '../layout/padding-container'
 
 const Footer = async () => {
@@ -17,9 +18,9 @@ const Footer = async () => {
         {/* Social and Currently At */}
         <div className="mt-6 flex flex-wrap justify-between gap-4">
           <div>
-            <div className="text-lg font-medium"></div>
+            <div className="text-lg font-medium">#explore world</div>
             <div className="mt-2 flex items-center gap-3 text-neutral-600">
-              {/* <SocialLink platform="twitter" link={siteConfig.socialLinks.x} />
+              <SocialLink platform="x" link={siteConfig.socialLinks.x} />
               <SocialLink
                 platform="instagram"
                 link={siteConfig.socialLinks.instagram}
@@ -35,7 +36,7 @@ const Footer = async () => {
               <SocialLink
                 platform="linkedin"
                 link={siteConfig.socialLinks.linkedin}
-              /> */}
+              />
             </div>
           </div>
           <div>
