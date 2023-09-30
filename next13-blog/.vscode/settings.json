@@ -9,5 +9,5 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "cSpell.words": ["NEXTAUTH"]
+  "cSpell.words": ["luxon", "NEXTAUTH"]
 }

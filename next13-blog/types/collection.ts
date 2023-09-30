@@ -23,3 +23,5 @@ export type Author = {
   first_name: string
   last_name: string
 }
+
+export type Layout = 'vertical' | 'horizontal'
