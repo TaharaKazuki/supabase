@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
 import type { Layout, Post } from '@/types/collection'
 
@@ -9,21 +8,28 @@ import PostContent from './post-content'
 type PostCardProps = {
   layout?: Layout
   post: Post
+  reverse?: boolean
 }
 
-const PostCard = ({ layout = 'horizontal', post }: PostCardProps) => {
+const PostCard = ({
+  layout = 'horizontal',
+  post,
+  reverse = false,
+}: PostCardProps) => {
   return (
     <Link
-      className={`${
+      className={`@container ${
         layout === 'horizontal'
-          ? 'grid grid-cols-2 items-center gap-10'
+          ? 'grid grid-cols-1 items-center gap-10 md:grid-cols-2'
           : 'space-y-10'
       }`}
       href={`/post/${post.slug}`}
     >
       {/* {post.title} */}
       <Image
-        className="max-h-[300px] w-full rounded-md object-cover object-center"
+        className={`max-h-[300px] w-full rounded-md object-cover object-center ${
+          reverse ? 'md:order-last' : ''
+        }`}
         alt={post.title}
         src={post.image}
         width={600}

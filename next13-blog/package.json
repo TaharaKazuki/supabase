@@ -10,6 +10,7 @@
     "fix:lint": "next lint --fix"
   },
   "dependencies": {
+    "@tailwindcss/container-queries": "^0.1.1",
     "@types/luxon": "^3.3.2",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",

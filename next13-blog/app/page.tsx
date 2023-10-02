@@ -1,8 +1,9 @@
+import CTACard from '@/app/components/elements/cta-cord'
+import PaddingContainer from '@/app/components/layout/padding-container'
+import PostCard from '@/app/components/post/post-card'
+import PostList from '@/app/components/post/post-list'
 import { DUMMY_POSTS } from '@/DUMMY_DATA'
 
-import PaddingContainer from './components/layout/padding-container'
-import PostCard from './components/post/post-card'
-import PostList from './components/post/post-list'
 import {
   END_INDEX,
   getSubsetOfPosts,
@@ -17,6 +18,9 @@ export default function Home() {
         <PostList
           posts={getSubsetOfPosts(DUMMY_POSTS, START_INDEX, END_INDEX)}
         />
+        <CTACard />
+        <PostCard reverse post={DUMMY_POSTS[3]} />
+        <PostList posts={getSubsetOfPosts(DUMMY_POSTS, 3, 6)} />
       </main>
     </PaddingContainer>
   )

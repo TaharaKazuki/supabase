@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import React from 'react'
 
 import PaddingContainer from '../layout/padding-container'
 
 const Navigation = () => {
   return (
-    <div className="sticky inset-x-0 top-0 border-b bg-white/70 backdrop-blur-md">
+    <div className="sticky inset-x-0 top-0 z-[999] border-b bg-white/70 backdrop-blur-md">
       <PaddingContainer>
         <div className="flex items-center justify-between py-5">
           <Link className="text-lg font-bold" href="/">
