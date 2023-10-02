@@ -29,7 +29,6 @@ const Page = ({ params }: PostPageProps) => {
   return (
     <PaddingContainer>
       <PostHero post={post} />
-      {post?.title}
     </PaddingContainer>
   )
 }
