@@ -1,3 +1,4 @@
+import ctl from '@netlify/classnames-template-literals'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -18,18 +19,22 @@ const PostCard = ({
 }: PostCardProps) => {
   return (
     <Link
-      className={`@container ${
-        layout === 'horizontal'
-          ? 'grid grid-cols-1 items-center gap-10 md:grid-cols-2'
-          : 'space-y-10'
-      }`}
+      className={ctl(
+        `@container ${
+          layout === `horizontal`
+            ? `grid grid-cols-1 items-center gap-10 md:grid-cols-2`
+            : `space-y-10`
+        }`,
+      )}
       href={`/post/${post.slug}`}
     >
       {/* {post.title} */}
       <Image
-        className={`max-h-[300px] w-full rounded-md object-cover object-center ${
-          reverse ? 'md:order-last' : ''
-        }`}
+        className={ctl(
+          `max-h-[300px] w-full rounded-md object-cover object-center ${
+            reverse ? 'md:order-last' : ''
+          }`,
+        )}
         alt={post.title}
         src={post.image}
         width={600}

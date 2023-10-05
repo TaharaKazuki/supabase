@@ -9,5 +9,8 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "cSpell.words": ["luxon", "NEXTAUTH", "tailwindcss"]
+  "cSpell.words": ["luxon", "NEXTAUTH", "tailwindcss"],
+  "tailwindCSS.experimental.classRegex": [
+    ["ctl\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }
